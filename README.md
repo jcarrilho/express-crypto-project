@@ -17,7 +17,7 @@ Coin List – Will have a search bar. The user will have the option to select th
 
 Dashboard – It will include fav coins list, news section and graphic/info section 
 
-Models –
+Models – {
   name: String,
 
   email: String,
