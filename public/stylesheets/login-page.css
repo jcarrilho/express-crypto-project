@@ -1,0 +1,6 @@
+.login-wrap {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+}
+

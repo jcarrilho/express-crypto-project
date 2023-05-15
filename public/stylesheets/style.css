@@ -1,12 +1,45 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import "home-signup.css";
+@import "login-page.css";
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-a {
-  color: #00b7ff;
+
+body{
+  font-family: sans-serif;
+  color: white;
+  padding: 20px;
+  height: 100%;
+  background-image: url("/images/bg-2.jpg");
+  background-size: 100%;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  padding: 20px 10px;
 }
 
 h1 {
-  color: 15px;
+  font-size: 4rem;
 }
+
+h3 {
+  font-family: custom-font;
+}
+
+
+p,
+span {
+  font-size: 1.2rem;
+}
+

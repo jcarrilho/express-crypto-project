@@ -1,0 +1,85 @@
+@font-face {
+  font-family: custom-font;
+  src: url(/fonts/CaviarDreams.ttf);
+}
+
+.signup-wrap {
+  display: grid;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+  bottom: 450px;
+  right: 200px;
+}
+
+.signup-form,
+.login-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  font-family: custom-font;
+}
+
+#home-logo {
+  color: whitesmoke;
+  font-family: custom-font;
+  position: relative;
+  left: 100px;
+  margin-right: 100%;
+}
+
+/* .home-introduction {
+  font-family: custom-font;
+  color: whitesmoke;
+  text-align: center;
+  width: 50%;
+  position: relative;
+  top: 60px;
+} */
+
+#introduction-text {
+  font-family: custom-font;
+  text-align: center;
+}
+
+.up-login-btn {
+  font-family: custom-font;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  transition: 0.5 ease;
+}
+
+.up-login-btn:hover {
+  color: lightblue;
+  transform: translateY(-0.25rem);
+  transition: transform 250ms;
+}
+
+ul:hover li a:not(:hover) {
+  color: whitesmoke;
+  opacity: 0.8;
+  filter: blur(1px);
+}
+
+#username-field:hover,
+#password-field:hover,
+#email-field:hover {
+  opacity: 0.5;
+  transition: .3s linear;
+}
+
+#login-btn,
+#signup-btn {
+  border: 1px solid whitesmoke;
+  font-family: custom-font;
+}
+
+#login-btn:hover,
+#signup-btn:hover {
+  color: lightblue;
+  border-color: lightblue;
+}

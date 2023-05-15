@@ -1,17 +1,97 @@
- <div class="login-wrap">
-        <h3 class="text-center">Don't have an account?</h3>
-        <form action="#" class="signup-form">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Username" id="">
-            </div>
-            <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email" id="">
-            </div>
-            <div class="form-group">
-                <input id="password-field" type="password" class="form-control">
-            </div>
-            <div class="form-group">
-                <button type="submit" class="form-control">Sign up</button>
-            </div>
-        </form>
+<ul class="nav justify-content-end nav-bar">
+  <li class="nav-item">
+    <a class="nav-link active up-login-btn" href="/login">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active up-login-btn" href="#">Sign Up</a>
+  </li>
+</ul>
+
+<h1 id="home-logo">Express<b>Crypto</b></h1>
+<div class="rows" id="introduction-text">
+  <div class="card-body col-6 p-3">
+    <p>Welcome to ExpressCrypto. Our platform is designed to help you
+      <b> track your favorite coins</b>
+      and stay up-to-date with the
+      <b> latest news</b>
+      and market trends.</p>
+    <p>With ExpressCrypto, you can easily monitor the prices of the coins of
+      your choice.Our <b>user-friendly interface</b> allows you to
+       customize your portfolio
+      by adding the coins you are interested in, and
+      <b> tracking their performance</b>
+      in real-time.</p>
+  </div>
+</div>
+
+<br />
+<div class="home-introduction">
+  {{!  <p>Welcome to ExpressCrypto. Our platform is designed to help you
+    <b> track your favorite coins</b>
+    and stay up-to-date with the
+    <b> latest news</b>
+    and market trends.</p> }}
+  {{!   <p>With ExpressCrypto, you can easily monitor the prices of the coins of your
+    choice. Our user-friendly interface allows you to
+    <b> customize your portfolio</b>
+    by adding the coins you are interested in, and
+    <b> tracking their performance</b>
+    in real-time.</p> }}
+</div>
+
+<br />
+<br />
+
+<div class="signup-wrap">
+  <h3 class="text-center">Don't have an account?</h3>
+  <form action="/login" class="signup-form">
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Username"
+        id="username-field"
+      />
     </div>
+    <br />
+    <div class="form-group">
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Email"
+        id="email-field"
+      />
+    </div>
+    <br />
+    <div class="form-group">
+      <input
+        id="password-field"
+        type="password"
+        class="form-control"
+        placeholder="Password"
+      />
+    </div>
+    <br />
+    <div class="form-group">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        style="background-color: transparent;"
+        id="signup-btn"
+      >Sign Up</button>
+    </div>
+  </form>
+  <h3 class="text-center">Have an account already?
+    <form action="/login" class="login-btn">
+      <br />
+      <div class="form-group">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="background-color: transparent;"
+          id="login-btn"
+        >Login</button>
+      </div>
+    </form>
+  </h3>
+</div>
