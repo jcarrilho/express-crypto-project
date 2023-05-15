@@ -1,8 +1,10 @@
  <div class="login-wrap">
   <h3 class="text-center">Welcome!</h3>
-  <form action="/list" class="signin-form">
+
+
+  <form action="/list" class="signin-form" method="post">
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Username" id="" />
+      <input type="text" class="form-control" placeholder="Username" id="" name="username"/>
     </div>
     <div class="form-group">
       <input
@@ -10,6 +12,7 @@
         type="password"
         class="form-control"
         placeholder="Password"
+        name="password"
       />
     </div>
     <div class="form-group">

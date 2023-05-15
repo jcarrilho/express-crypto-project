@@ -5,26 +5,26 @@ const userSchema = new Schema(
   {
     username: {
       type: String,
-      trim: true,
       required: false,
-      unique: true
+      unique: true,
+      trim: true,
     },
     email: {
       type: String,
-      required: [true, 'Email is required'],
+      required: true,
       unique: true,
+      trim: true,
       lowercase: true,
-      trim: true
     },
     password: {
       type: String,
-      required: [true, 'Password is required']
-    }
+      required: true,
+    },
+    portfolio: [{ type: Schema.Types.ObjectId, ref: "Crypto" }],
   },
   {
-    crypto: {
-      type: [Schema.Types.ObjectId], ref: 'Cryptos'
-    }
+    // this second object adds extra properties: `createdAt` and `updatedAt`
+    timestamps: true,
   }
 );
 

@@ -1,153 +1,155 @@
-// Require Express Method that helps us to create Routes
-const {Router} = require('express');
-// bcrypt is a npm package that encrypts passwords
-const bcryptjs = require('bcryptjs');
-// rounds of encryption
-const saltRounds = 10; 
+const express = require("express");
+const router = express.Router();
 
-// require the User Model
-const mongoose = require('mongoose');
-const User = require('../models/User.model');
+// ℹ️ Handles password encryption
+const bcrypt = require("bcrypt");
+const mongoose = require("mongoose");
 
-const router = new Router();
+// How many rounds should bcrypt run the salt (default - 10 rounds)
+const saltRounds = 10;
 
-// Require Auth Middleware
-const {isLoggedIn, isLoggedOut} = require('../middleware/route-guard');
-const { route } = require('./home.routes');
+// Require the User model in order to interact with the database
+const User = require("../models/User.model");
 
-// password: mycutegrandmama123
+// Require necessary (isLoggedOut and isLiggedIn) middleware in order to control access to specific routes
 
-// GET Route --> display the 'signup' form to the user
-router.get('/home-signup', (req,res)=> {
-    res.render('pages/signup.hbs')
+
+// GET /auth/signup
+router.get("/signup", (req, res) => {
+  res.render("pages/signup");
 });
 
-// POST Route --> to post info of the form and create a new user
-route.post('/home-signup', (req,res)=>{
-    const {username,email, password} = req.body;
+// POST /auth/signup
+router.post("/signup", (req, res) => {
+  const { username, email, password } = req.body;
 
-    // Make sure my password is strong 
+  // Check that username, email, and password are provided
+  if (username === "" || email === "" || password === "") {
+    res.status(400).render("pages/signup", {
+      errorMessage:
+        "All fields are mandatory. Please provide your username, email and password.",
+    });
 
-    // Makes sure that you have at least one lowercase letter, one uppercase letter and 6 digits. 
-    const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+    return;
+  }
 
-    if (!regex.test(password)){
-        res.status(500).render('auth/signup', {errorMessage: 'Password needs to have at least 6 characters, 1 lowercase letter and 1 uppercase letter'});
-        return;
-    }
+  if (password.length < 6) {
+    res.status(400).render("pages/signup", {
+      errorMessage: "Your password needs to be at least 6 characters long.",
+    });
 
-     // Make sure users fill all mandatory fields
-     if(!username || !email || !password){
-        res.render('auth/signup', {errorMessage: 'All fields are mandatory. Please add your username, password and e-mail, if you may.'});
-        return;
-    }
+    return;
+  }
 
-    async function encryptPassword(){
-        try{
-        // salt is a random string
-        let salt = await bcryptjs.genSalt(saltRounds);
-        // combines salt and password --> FUSION, AHH! 
-        let hashedPassword = await bcryptjs.hash(password, salt);
-        //console.log(`Password hash: ${hashedPassword}`);
+  //   ! This regular expression checks password for special characters and minimum length
+  /*
+  const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+  if (!regex.test(password)) {
+    res
+      .status(400)
+      .render("auth/signup", {
+        errorMessage: "Password needs to have at least 6 chars and must contain at least one number, one lowercase and one uppercase letter."
+    });
+    return;
+  }
+  */
 
-        // save to DB 
-        let newUser = await User.create({
-            username, 
-            email, 
-            passwordHash: hashedPassword,
-        }); 
-
-        // Redirect to User Profile 
-        res.redirect('/userProfile');
-    }
-    catch(error){
-        if(error instanceof mongoose.Error.ValidationError){
-            // HTTP Response Codes
-            // 200 - successful response
-            // 4xx - client-side error;
-            // 404 - not found on client;
-            // 5xx - server-side error; 
-            // 505 - not found on server; 
-            // 11000 - native MongoDB error --> you tried to submit a value that was created before. 
-                    // same email / same username as other user. 
-
-            res.status(500).render('auth/signup', {errorMessage: error.message});
-        } 
-        else if (error.code === 11000){
-            res.status(500).render('auth/signup', {errorMessage: 'Username and email must be unique. Choose an username / email that are original', });
-        }
-        
-        else{
-            console.log(error);
-        }
-    }
-    }
-
-    encryptPassword();
-});
-
-router.get('/userProfile', isLoggedIn, (req, res)=>{
-    res.render('user/user-profile.hbs', {userInSession: req.session.currentUser});
-});
-
-// LOGIN // 
-
-// GET Route to display the login form to the user 
-
-router.get('/login', (req,res)=>{
-    res.render('pages/login.hbs')
-});
-
-// POST Route to validate the user
-
-router.post('/login', (req,res)=>{
-    console.log(req.session);
-    const {email, password} = req.body;
-
-    // Validade if the user submitted email / password blank
-    if(email === '' || password===''){
-        res.render('pages/login.hbs', {
-            errorMessage: 'Please fill all the required fields.'
-        });
-        return;
-    }
-
-    async function manageDb(){
-        try{ 
-            let user = await User.findOne({email});
-            if(!user){
-                res.render('pages/login', {errorMessage: 'Email is not registered.'})
-            } else if (bcryptjs.compareSync(password, user.passwordHash)){
-                console.log('loggedin');
-                req.session.currentUser = user; 
-                res.redirect('/userProfile');
-            } else {
-                res.render('pages/login', {errorMessage: 'Wrong Password'})
-            }
-        }
-        catch(error){
-            console.log(error);
-        }
-    }
-
-    manageDb();
-});
-
-// POST Route to logout
-router.post('/logout', (req, res)=>{
-    // Kill the Session
-    req.session.destroy(err=>{
-        if(err){
-            console.log(err);
-        }
-    // Redirect to Homepage
-    res.redirect('pages/signup.hbs');
+  // Create a new user - start by hashing the password
+  bcrypt
+    .genSalt(saltRounds)
+    .then((salt) => bcrypt.hash(password, salt))
+    .then((hashedPassword) => {
+      // Create a user and save it in the database
+      return User.create({ username, email, password: hashedPassword });
     })
-})
+    .then((user) => {
+      res.redirect("/login");
+    })
+    .catch((error) => {
+      if (error instanceof mongoose.Error.ValidationError) {
+        res.status(500).render("pages/signup", { errorMessage: error.message });
+      } else if (error.code === 11000) {
+        res.status(500).render("pages/signup", {
+          errorMessage:
+            "Username and email need to be unique. Provide a valid username or email.",
+        });
+      } else {
+        next(error);
+      }
+    });
+});
 
+// GET /auth/login
+router.get("/login", (req, res) => {
+  res.render("pages/login");
+});
 
+// POST /auth/login
+router.post("/login", (req, res, next) => {
+  const { username, password } = req.body;
 
-/// Export Router
-module.exports = router; 
+  // Check that username, email, and password are provided
+  if (username === "" || password === "") {
+    res.status(400).render("pages/login", {
+      errorMessage:
+        "All fields are mandatory. Please provide username, email and password.",
+    });
 
+    return;
+  }
 
+  // Here we use the same logic as above
+  // - either length based parameters or we check the strength of a password
+  if (password.length < 6) {
+    return res.status(400).render("pages/login", {
+      errorMessage: "Your password needs to be at least 6 characters long.",
+    });
+  }
+
+  // Search the database for a user with the email submitted in the form
+  User.findOne({ username })
+    .then((user) => {
+      // If the user isn't found, send an error message that user provided wrong credentials
+      if (!user) {
+        res
+          .status(400)
+          .render("pages/login", { errorMessage: "Wrong credentials." });
+        return;
+      }
+
+      // If user is found based on the username, check if the in putted password matches the one saved in the database
+      bcrypt
+        .compare(password, user.password)
+        .then((isSamePassword) => {
+          if (!isSamePassword) {
+            res
+              .status(400)
+              .render("pages/login", { errorMessage: "Wrong credentials." });
+            return;
+          }
+
+          // Add the user object to the session object
+          req.session.currentUser = user.toObject();
+          // Remove the password field
+          delete req.session.currentUser.password;
+
+          res.redirect("/");
+        })
+        .catch((err) => next(err)); // In this case, we send error handling to the error handling middleware.
+    })
+    .catch((err) => next(err));
+});
+
+// GET /auth/logout
+router.get("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      res.status(500).render("auth/logout", { errorMessage: err.message });
+      return;
+    }
+
+    res.redirect("/");
+  });
+});
+
+module.exports = router;
