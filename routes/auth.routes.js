@@ -133,7 +133,7 @@ router.post("/login", (req, res, next) => {
           // Remove the password field
           delete req.session.currentUser.password;
 
-          res.redirect("/");
+          res.redirect("/list");
         })
         .catch((err) => next(err)); // In this case, we send error handling to the error handling middleware.
     })
