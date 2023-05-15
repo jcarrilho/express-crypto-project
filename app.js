@@ -31,6 +31,12 @@ app.use("/", indexRoutes);
 const homeRoutes = require('./routes/home.routes');
 app.use('/', homeRoutes);
 
+const cryptoRoutes = require('./routes/crypto.routes');
+app.use('/', cryptoRoutes);
+
+const profileRoutes = require('./routes/profile.routes');
+app.use('/', profileRoutes);
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
