@@ -26,6 +26,7 @@ h3 {
 #home-logo {
   color: whitesmoke;
   font-family: custom-font;
+  font-size: 30px;
   position: relative;
   left: 100px;
   margin-right: 100%;
@@ -43,6 +44,8 @@ h3 {
 #introduction-text {
   font-family: custom-font;
   text-align: center;
+  position: relative; 
+  top: 100px;
 }
 
 .up-login-btn {
