@@ -6,10 +6,9 @@
 .signup-wrap {
   display: grid;
   flex-direction: column;
-  justify-content: end;
-  position: relative;
-  bottom: 450px;
-  right: 200px;
+  justify-content: center;
+   position: relative;
+  top: 20%;
 }
 
 .signup-form,
@@ -28,18 +27,11 @@ h3 {
   font-family: custom-font;
   font-size: 30px;
   position: relative;
-  left: 100px;
+  left: 20px;
+  bottom: 15px;
   margin-right: 100%;
 }
 
-/* .home-introduction {
-  font-family: custom-font;
-  color: whitesmoke;
-  text-align: center;
-  width: 50%;
-  position: relative;
-  top: 60px;
-} */
 
 #introduction-text {
   font-family: custom-font;
@@ -54,9 +46,12 @@ h3 {
   letter-spacing: 1px;
   color: whitesmoke;
   transition: 0.5 ease;
+  position: relative; 
+  bottom: 60px;
 }
 
-.up-login-btn:hover {
+.up-login-btn:hover,
+#home-dropdown:hover {
   color: lightblue;
   transform: translateY(-0.25rem);
   transition: transform 250ms;
@@ -83,6 +78,22 @@ ul:hover li a:not(:hover) {
 
 #login-btn:hover,
 #signup-btn:hover {
-  color: lightblue;
+  color: #eb64b5;
   border-color: lightblue;
 }
+
+#home-dropdown{
+  position: relative;
+    bottom: 58px;
+    background-color: transparent;
+    border: none;
+    font-family: 'custom-font';
+    font-weight: bold;
+    color: whitesmoke;
+    letter-spacing: 1px;
+}
+
+#account-question{
+  font-size: 18px;
+}
+

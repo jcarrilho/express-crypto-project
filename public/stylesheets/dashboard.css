@@ -1,0 +1,47 @@
+body{
+    backdrop-filter: blur(3px);
+}
+
+.container{
+    position: relative;
+    top: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+#dashboard-nav{
+    position: relative;
+    top: 60px;
+}
+
+.user-list{
+    width: 448px;
+    height: 550px;
+    background-color:  rgba(128, 128, 128, 0.5);;
+    position: relative;
+    top: 25px;
+    left: 7px;
+    border-radius: 15px;
+}
+
+.news-widget{
+    width: 800px;
+    height: 200px;
+    background-color:  rgba(0, 0, 0, 0.5);
+    position: relative;
+    left: 470px;
+    bottom: 502px;
+    border-radius: 15px;
+}
+
+
+
+.graphic-widget{
+    width: 800;
+    height: 330;
+    background-color:  rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    position: relative;
+    bottom: 525px;
+    left: 470px;
+}

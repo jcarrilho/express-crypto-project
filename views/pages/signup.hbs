@@ -5,12 +5,23 @@
 </nav>
 
  <ul class="nav justify-content-end nav-bar">
+  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="home-dropdown">
+    About Us
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
   <li class="nav-item">
     <a class="nav-link active up-login-btn" href="/login">Login</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active up-login-btn" href="#">Sign Up</a>
+    <a class="nav-link active up-login-btn" href="/home">Sign Up</a>
   </li>
+  
 </ul> 
 
 {{!-- <h1 id="home-logo">Express<b>Crypto</b></h1> --}}
@@ -48,7 +59,7 @@
 <br />
 <br />
 
-<div class="signup-wrap">
+{{!-- <div class="signup-wrap">
   <h3 class="text-center">Don't have an account?</h3>
 
 
@@ -76,11 +87,11 @@
     <br />
     <div class="form-group">
       <input
-        id="password-field"
         type="password"
         class="form-control"
         placeholder="password"
         name="password"
+        id="password-field"
       />
     </div>
     <br />
@@ -106,4 +117,4 @@
       </div>
     </form>
   </h3>
-</div>
+</div> --}}

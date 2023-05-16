@@ -1,21 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Crypto List</title>
+
 
 </head>
 <body>
   <h1>Crypto List</h1>
-  <!-- Displays the list of coins fetched from the API -->
-  {{#each Cryptos}}
-    <p>{{this.cryptoName}}</p>
-  {{/each}}
+  <!-- Displays the list of coins fetched from DB -->
+ 
   <a href="/dashboard">View dashboard</a>
   <a href="/user-profile">User Profile</a>
-  <a href="/home-signup">Logout</a>
+  <a href="/signup">Logout</a>
 
+ <table class="table table-sm" id="text">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Image</th>
+      <th scope="col">Name</th>
+      <th scope="col">symbol</th>
+      <th scope="col">Favorite</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each cryptos}}
+  <tr>
+    <td>{{@index}}</td>
+    <td><img src="{{image}}"></td>
+    <td>{{name}}</td>
+    <td>{{symbol}}</td>
+    <td>
+      <form action="/list/{{_id}}" method="POST">
+        <button type="submit">Add to favorite</button>
+      </form>
+    </td>
+  </tr>
+  {{/each}}
+</tbody>
+</table> 
 
-  
 </body>
 </html>
 

@@ -1,0 +1,59 @@
+<div class="signup-wrap">
+  <h3 class="text-center">Don't have an account?</h3>
+
+
+
+  <form action="/signup" class="signup-form" method="post">
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="username"
+        name="username"
+        id="username-field"
+      />
+    </div>
+    <br />
+    <div class="form-group">
+      <input
+        type="email"
+        class="form-control"
+        placeholder="email"
+        name="email"
+        id="email-field"
+      />
+    </div>
+    <br />
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="password"
+        name="password"
+        id="password-field"
+      />
+    </div>
+    <br />
+    <div class="form-group">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        style="background-color: transparent;"
+        id="signup-btn"
+      >Sign Up</button>
+    </div>
+  </form>
+  <h3 class="text-center" id="account-question">Have an account already?
+    <form action="/login" class="login-btn">
+      <br />
+      <div class="form-group">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="background-color: transparent;"
+          id="login-btn"
+        >Login</button>
+      </div>
+    </form>
+  </h3>
+</div>

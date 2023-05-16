@@ -4,12 +4,7 @@ const cryptoSchema = new Schema ({
     id: String,
     symbol: String,
     name: String,
-    image: String,
-
-    userFavorite: [{
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    }]
+    image: String
 });
 
 const Crypto = model("Crypto", cryptoSchema);

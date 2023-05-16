@@ -2,5 +2,33 @@
   display: grid;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  top: 30%;
+}
+
+#username-field:hover,
+#password-field:hover
+ {
+  opacity: 0.5;
+  transition: .3s linear;
+}
+
+#signin-btn
+ {
+  border: 1px solid whitesmoke;
+  font-family: custom-font;
+  background-color: transparent;
+  color: white;
+}
+
+#login-btn-box{
+  display: flex;
+  justify-content: center;
+}
+
+#signin-btn:hover
+{
+  color: #eb64b5;
+  border-color: lightblue;
 }
 
