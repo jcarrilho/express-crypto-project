@@ -1,19 +1,55 @@
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
-  <script
-    type="text/javascript"
-    src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
-    async
-  >
-    { "symbols": [ { "proName": "FOREXCOM:SPXUSD", "title": "S&P 500" }, {
-    "proName": "FOREXCOM:NSXUSD", "title": "US 100" }, { "proName":
-    "FX_IDC:EURUSD", "title": "EUR/USD" }, { "proName": "BITSTAMP:BTCUSD",
-    "title": "Bitcoin" }, { "proName": "BITSTAMP:ETHUSD", "title": "Ethereum" }
-    ], "showSymbolLogo": true, "colorTheme": "dark", "isTransparent": false,
-    "displayMode": "adaptive", "locale": "en" }
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "description": "BITCOIN",
+      "proName": "BINANCE:BTCUSDT"
+    },
+    {
+      "description": "ETHEREUM",
+      "proName": "BITSTAMP:ETHUSD"
+    },
+    {
+      "description": "XRP",
+      "proName": "BINANCE:XRPUSDT"
+    },
+    {
+      "description": "CARDANO",
+      "proName": "BINANCE:ADAUSDT"
+    },
+    {
+      "description": "DOGECOIN",
+      "proName": "BINANCE:DOGEUSDT"
+    },
+    {
+      "description": "LITECOIN",
+      "proName": "BINANCE:LTCUSDT"
+    },
+    {
+      "description": "SOLANA",
+      "proName": "COINBASE:SOLUSD"
+    },
+    {
+      "description": "POLYGON",
+      "proName": "KUCOIN:MATICUSDT"
+    },
+    {
+      "description": "DOT",
+      "proName": "KUCOIN:DOTUSDT"
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "dark",
+  "isTransparent": true,
+  "displayMode": "adaptive",
+  "locale": "en"
+}
   </script>
 </div>
+<!-- TradingView Widget END -->
 
 <ul class="nav justify-content-end nav-bar" id="dashboard-nav">
   <li class="nav-item">
