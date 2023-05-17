@@ -21,7 +21,7 @@ module.exports = app => {
                 sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax', // ternary operators --> make conditions
                 secure: process.env.NODE_ENV === 'production', // https instead http
                 httpOnly: true,
-                maxAge: 60000, // 60 * 1000ms  === 1 min
+                maxAge: 6000000, // 60 * 1000ms  === 1 min
             },
             store: MongoStore.create({
                 mongoUrl: process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/express-crypto-project"

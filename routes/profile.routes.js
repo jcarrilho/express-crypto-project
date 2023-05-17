@@ -7,7 +7,8 @@ router.get('/user-profile', (req,res)=>{
 
 
   
-router.post('/user-logout', (req,res)=>{
+router.post('/user-profile', (req,res)=>{
+  
     res.redirect('pages/signup.hbs')
   });
 

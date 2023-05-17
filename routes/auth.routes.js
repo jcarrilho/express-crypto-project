@@ -15,9 +15,13 @@ const User = require("../models/User.model");
 
 
 // GET /auth/signup
-router.get("/signup", (req, res) => {
-  res.render("pages/signup");
+router.get("/home", (req, res) => {
+  res.render("pages/home");
 });
+
+router.get('/signup', (req,res)=>{
+  res.render('pages/signup')
+})
 
 // POST /auth/signup
 router.post("/signup", (req, res) => {
@@ -162,7 +166,7 @@ router.get("/logout", (req, res) => {
       return;
     }
 
-    res.redirect("/");
+    res.redirect("/home");
   });
 });
 

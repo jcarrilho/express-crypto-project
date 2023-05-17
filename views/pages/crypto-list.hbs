@@ -14,13 +14,13 @@
     <a class="nav-link active up-login-btn" href="/user-profile"> Profile</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active up-login-btn" href="/signup">Logout</a>
+    <a class="nav-link active up-login-btn" href="/logout">Logout</a>
   </li>
 
 </ul>
 
 
- <table class="table table-sm" id="text">
+  <table class="table table-sm" id="text">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -28,6 +28,7 @@
       <th scope="col">Name</th>
       <th scope="col">symbol</th>
       <th scope="col">Favorite</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -42,10 +43,43 @@
         <button type="submit">Add to favorite</button>
       </form>
     </td>
+    <td>
+      {{#unless image}}
+            <form action="/delete/{{_id}}" method="POST">
+        <button type="submit">Remove Token</button>
+      </form>
+      {{/unless}}
+    </td>
   </tr>
   {{/each}}
 </tbody>
 </table> 
+ 
+
+
+{{!-- Create crypto Form --}}
+
+  <h2>Create Your Own Crypto</h2> 
+
+ <div class="row">
+  <div class="col-md-6">
+<form action="/list" method="post">
+  
+  <div class="form-group">
+    <label for="symbol">Symbol</label>
+    <input type="text" class="form-control" id="symbol" name="symbol" required>
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" required>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Create Crypto</button>
+  </div>
+</form>
+  </div>
+  </div> 
+
 
 </body>
 </html>

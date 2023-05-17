@@ -56,13 +56,48 @@
     <a class="nav-link active up-login-btn" href="/user-profile">Profile</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active up-login-btn" href="signup">Logout</a>
+    <a class="nav-link active up-login-btn" href="home">Logout</a>
   </li>
 
 </ul>
 
 <div class="container" style="width: 1300px; height: 600px;">
-  <div class="user-list"></div>
+  <div class="user-list">
+
+  <h3 id="portfolio-text">Portfolio</h3>
+  <div class="crypto-list">
+  <ul>
+    {{#each user.portfolio}}
+      
+        <img src="{{ this.image }}">
+        <span>{{ this.name }} ({{ this.symbol }})</span>
+      
+      <form action="/dashboard/{{_id}}"  method="post">
+ <div class="form-group">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="background-color: transparent;"
+          id="delete-btn"
+        >Delete</button>
+    </div>
+    </form>
+    {{/each}}
+  </ul>
+</div>
+
+
+<form action="/list" class="login-btn">
+ <div class="form-group">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="background-color: transparent;"
+          id="add-btn"
+        >Add more</button>
+    </div>
+    </form>
+  </div>
   <div class="graphic-widget">
     <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">

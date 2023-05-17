@@ -21,6 +21,8 @@ const userSchema = new Schema(
       required: true,
     },
     portfolio: [{ type: Schema.Types.ObjectId, ref: "Crypto" }],
+
+    // createdCryptos: [{ type: Schema.Types.ObjectId, ref: "Crypto" }]
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

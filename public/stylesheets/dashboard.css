@@ -5,7 +5,7 @@ body{
 .container{
     position: relative;
     top: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 15px;
 }
 
@@ -18,7 +18,7 @@ body{
 .user-list{
     width: 448px;
     height: 550px;
-    background-color:  rgba(128, 128, 128, 0.5);;
+    background-color: rgba(0, 0, 0, 0.6);
     position: relative;
     top: 25px;
     left: 7px;
@@ -28,7 +28,7 @@ body{
 .news-widget{
     width: 800px;
     height: 200px;
-    background-color:  rgba(0, 0, 0, 0.5);
+    background-color:  rgba(0, 0, 0, 0.6);
     position: relative;
     left: 470px;
     bottom: 502px;
@@ -40,9 +40,44 @@ body{
 .graphic-widget{
     width: 800;
     height: 330;
-    background-color:  rgba(0, 0, 0, 0.5);
+    background-color:  rgba(0, 0, 0, 0.6);
     border-radius: 15px;
     position: relative;
     bottom: 525px;
     left: 470px;
+}
+
+#delete-btn{
+    border-color: whitesmoke;
+    font-family: 'custom-font';
+    font-size: 14px;
+    padding: 10;
+    padding-top: 1;
+    padding-bottom: 1;
+}
+
+#delete-btn:hover{
+    color: lightblue;
+}
+
+#add-btn{
+    border-color: whitesmoke;
+    font-family: 'custom-font';
+    position: relative;
+    top: 70px;
+}
+#add-btn:hover{
+    color: lightblue;
+}
+
+#portfolio-text{
+    font-size: 38px;
+    text-align: center;
+
+}
+
+
+.crypto-list{
+    height: 450px;
+    overflow-y: scroll;
 }
