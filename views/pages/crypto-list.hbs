@@ -19,16 +19,14 @@
 
 </ul>
 
-
+<div class="crypto-table">
   <table class="table table-sm" id="text">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Image</th>
+      <th scope="col"></th>
       <th scope="col">Name</th>
       <th scope="col">symbol</th>
-      <th scope="col">Favorite</th>
-      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -40,7 +38,14 @@
     <td>{{symbol}}</td>
     <td>
       <form action="/list/{{_id}}" method="POST">
-        <button type="submit">Add to favorite</button>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="background-color: transparent;"
+          id="delete-btn"
+        >Add to Favorite</button>
+        
+    </div>
       </form>
     </td>
     <td>
@@ -55,7 +60,7 @@
 </tbody>
 </table> 
  
-
+</div>
 
 {{!-- Create crypto Form --}}
 

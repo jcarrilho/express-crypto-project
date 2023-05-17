@@ -54,6 +54,9 @@ body{
     padding: 10;
     padding-top: 1;
     padding-bottom: 1;
+    position: relative;
+    left: 300px;
+    bottom: 25px;
 }
 
 #delete-btn:hover{
@@ -64,7 +67,7 @@ body{
     border-color: whitesmoke;
     font-family: 'custom-font';
     position: relative;
-    top: 70px;
+    top: 35px;
 }
 #add-btn:hover{
     color: lightblue;
@@ -78,6 +81,6 @@ body{
 
 
 .crypto-list{
-    height: 450px;
+    height: 350px;
     overflow-y: scroll;
 }

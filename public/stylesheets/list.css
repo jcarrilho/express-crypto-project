@@ -1,5 +1,5 @@
 img {
-    width: 5%;
+    width: 10%;
 }
 
 #text {
@@ -8,4 +8,9 @@ img {
 
 .table{
     width: 50vw;
+}
+
+.crypto-table{
+    height: 350px;
+    overflow-y: scroll;
 }
