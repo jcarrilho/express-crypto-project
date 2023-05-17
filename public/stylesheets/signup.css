@@ -7,7 +7,7 @@
   display: grid;
   flex-direction: column;
   justify-content: center;
-   position: relative;
+  position: relative;
   top: 20%;
 }
 
@@ -28,15 +28,14 @@ h3 {
   font-size: 30px;
   position: relative;
   left: 20px;
-  bottom: 15px;
+  bottom: 5px;
   margin-right: 100%;
 }
-
 
 #introduction-text {
   font-family: custom-font;
   text-align: center;
-  position: relative; 
+  position: relative;
   top: 100px;
 }
 
@@ -46,15 +45,16 @@ h3 {
   letter-spacing: 1px;
   color: whitesmoke;
   transition: 0.5 ease;
-  position: relative; 
+  position: relative;
   bottom: 60px;
 }
 
 .up-login-btn:hover,
-#home-dropdown:hover {
+#up-signup-btn:hover {
   color: lightblue;
-  transform: translateY(-0.25rem);
-  transition: transform 250ms;
+  /* border-color: lightblue; */
+  /*  transform: translateY(-0.25rem);
+  transition: transform 250ms; */
 }
 
 ul:hover li a:not(:hover) {
@@ -63,11 +63,16 @@ ul:hover li a:not(:hover) {
   filter: blur(1px);
 }
 
+#up-signup-btn {
+  border: 1px solid whitesmoke;
+  border-radius: 20px;
+}
+
 #username-field:hover,
 #password-field:hover,
 #email-field:hover {
   opacity: 0.5;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
 
 #login-btn,
@@ -82,18 +87,31 @@ ul:hover li a:not(:hover) {
   border-color: lightblue;
 }
 
-#home-dropdown{
+#home-dropdown {
   position: relative;
-    bottom: 58px;
-    background-color: transparent;
-    border: none;
-    font-family: 'custom-font';
-    font-weight: bold;
-    color: whitesmoke;
-    letter-spacing: 1px;
+  bottom: 58px;
+  background-color: transparent;
+  border: none;
+  font-family: "custom-font";
+  font-weight: bold;
+  color: whitesmoke;
+  letter-spacing: 1px;
 }
 
-#account-question{
+.dropdown-menu {
+  font-family: "custom-font";
+  background-color: rgba(0, 0, 0);
+  border-radius: 10px;
+  color: white;
+}
+
+#account-question {
   font-size: 18px;
+}
+
+#carouselExampleIndicators{
+  position: relative;
+  left: 740px;
+  bottom: 250px;
 }
 

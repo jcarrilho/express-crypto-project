@@ -4,27 +4,31 @@
   </div>
 </nav>
 
- <ul class="nav justify-content-end nav-bar">
+<ul class="nav justify-content-end nav-bar">
   <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="home-dropdown">
-    About Us
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-</div>
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+      id="home-dropdown"
+    >
+      About Us
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="https://github.com/lltelles">Lucas Github</a></li>
+      <li><a class="dropdown-item" href="https://github.com/jcarrilho">João Github</a></li>
+    </ul>
+  </div>
   <li class="nav-item">
     <a class="nav-link active up-login-btn" href="/login">Login</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active up-login-btn" href="/home">Sign Up</a>
+    <a class="nav-link active up-login-btn" href="/home" id="up-signup-btn">Sign Up</a>
   </li>
-  
-</ul> 
 
-{{!-- <h1 id="home-logo">Express<b>Crypto</b></h1> --}}
+</ul>
+
 <div class="rows" id="introduction-text">
   <div class="card-body col-6 p-3">
     <p>Welcome to ExpressCrypto. Our platform is designed to help you
@@ -33,88 +37,55 @@
       <b> latest news</b>
       and market trends.</p>
     <p>With ExpressCrypto, you can easily monitor the prices of the coins of
-      your choice.Our <b>user-friendly interface</b> allows you to
-       customize your portfolio
-      by adding the coins you are interested in, and
+      your choice.Our
+      <b>user-friendly interface</b>
+      allows you to customize your portfolio by adding the coins you are
+      interested in, and
       <b> tracking their performance</b>
       in real-time.</p>
   </div>
 </div>
 
-<br />
-<div class="home-introduction">
-  {{!  <p>Welcome to ExpressCrypto. Our platform is designed to help you
-    <b> track your favorite coins</b>
-    and stay up-to-date with the
-    <b> latest news</b>
-    and market trends.</p> }}
-  {{!   <p>With ExpressCrypto, you can easily monitor the prices of the coins of your
-    choice. Our user-friendly interface allows you to
-    <b> customize your portfolio</b>
-    by adding the coins you are interested in, and
-    <b> tracking their performance</b>
-    in real-time.</p> }}
+<div id="carouselExampleIndicators" class="carousel slide" style="width: 50%; height: 50%"  >
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+  {
+  "width": "760",
+  "height": "350",
+  "defaultColumn": "overview",
+  "screener_type": "crypto_mkt",
+  "displayCurrency": "USD",
+  "colorTheme": "dark",
+  "locale": "en",
+  "isTransparent": false
+}
+  </script>
 </div>
-
-<br />
-<br />
-
-{{!-- <div class="signup-wrap">
-  <h3 class="text-center">Don't have an account?</h3>
-
-
-
-  <form action="/signup" class="signup-form" method="post">
-    <div class="form-group">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="username"
-        name="username"
-        id="username-field"
-      />
+<!-- TradingView Widget END -->    </div>
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="images/dashboard.jpg" class="d-block w-100" alt="...">
     </div>
-    <br />
-    <div class="form-group">
-      <input
-        type="email"
-        class="form-control"
-        placeholder="email"
-        name="email"
-        id="email-field"
-      />
+    <div class="carousel-item" data-bs-interval="10000">
+      <img src="..." class="d-block w-100" alt="...">
     </div>
-    <br />
-    <div class="form-group">
-      <input
-        type="password"
-        class="form-control"
-        placeholder="password"
-        name="password"
-        id="password-field"
-      />
-    </div>
-    <br />
-    <div class="form-group">
-      <button
-        type="submit"
-        class="btn btn-primary"
-        style="background-color: transparent;"
-        id="signup-btn"
-      >Sign Up</button>
-    </div>
-  </form>
-  <h3 class="text-center">Have an account already?
-    <form action="/login" class="login-btn">
-      <br />
-      <div class="form-group">
-        <button
-          type="submit"
-          class="btn btn-primary"
-          style="background-color: transparent;"
-          id="login-btn"
-        >Login</button>
-      </div>
-    </form>
-  </h3>
-</div> --}}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+      
+    

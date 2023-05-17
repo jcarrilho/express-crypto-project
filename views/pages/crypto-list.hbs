@@ -2,12 +2,23 @@
 
 </head>
 <body>
-  <h1>Crypto List</h1>
+  <h1 id="crypto-list">Crypto <b>List</b></h1>
   <!-- Displays the list of coins fetched from DB -->
  
-  <a href="/dashboard">View dashboard</a>
-  <a href="/user-profile">User Profile</a>
-  <a href="/signup">Logout</a>
+ <ul class="nav justify-content-end nav-bar" id="list-navbar">
+
+  <li class="nav-item">
+    <a class="nav-link active up-login-btn" href="/dashboard">View Dashboard</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active up-login-btn" href="/user-profile"> Profile</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active up-login-btn" href="/signup">Logout</a>
+  </li>
+
+</ul>
+
 
  <table class="table table-sm" id="text">
   <thead>

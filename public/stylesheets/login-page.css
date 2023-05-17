@@ -3,32 +3,52 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  top: 30%;
+  bottom: 10%;
 }
 
 #username-field:hover,
-#password-field:hover
- {
+#password-field:hover {
   opacity: 0.5;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
 
-#signin-btn
- {
+#signin-btn {
   border: 1px solid whitesmoke;
   font-family: custom-font;
   background-color: transparent;
   color: white;
 }
 
-#login-btn-box{
+#login-btn-box {
   display: flex;
   justify-content: center;
 }
 
-#signin-btn:hover
-{
+#signin-btn:hover {
   color: #eb64b5;
   border-color: lightblue;
 }
 
+#welcome {
+  font-size: 40px; 
+}
+
+.login-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 250px;
+  height: 300px;
+  position: relative;
+  left: 42%;
+  top: 30%;
+  border-radius: 15px;
+}
+
+#list-navbar{
+  position: relative;
+  bottom: 40px;
+}
+
+#crypto-list{
+  font-family: 'custom-font';
+  position: relative;
+}
