@@ -1,5 +1,6 @@
 body {
   background-image: url("/images/bg-1.jpg");
+  backdrop-filter: brightness(0.8);
 
 }
 
