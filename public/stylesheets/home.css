@@ -53,7 +53,8 @@ body {
 }
 
 .up-login-btn:hover,
-#up-signup-btn:hover {
+#up-signup-btn:hover,
+#home-dropdown:hover {
   color: lightblue;
   /* border-color: lightblue; */
    /*  transform: translateY(-0.25rem);
