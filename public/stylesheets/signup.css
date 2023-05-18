@@ -20,7 +20,7 @@
 }
 
 h3 {
-  font-family: custom-font;
+  font-family: 'custom-font';
 }
 
 
@@ -39,7 +39,7 @@ h3 {
 
 #login-btn:hover,
 #signup-btn:hover {
-  color: #eb64b5;
+  color: lightblue;
   border-color: lightblue;
 }
 

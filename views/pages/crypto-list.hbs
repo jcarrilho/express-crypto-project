@@ -47,13 +47,13 @@
     </div>
         
     </div>
-    {{!-- <td>
+     <td>
       {{#unless image}}
             <form action="/delete/{{_id}}" method="POST">
-        <button type="submit">Remove Token</button>
+        <button type="submit" id="remove-btn">Remove Token</button>
       </form>
       {{/unless}}
-    </td> --}}
+    </td> 
   </tr>
   {{/each}}
 </tbody>
@@ -61,40 +61,13 @@
  
 </div>
 
-{{!-- Create crypto Form --}}
-{{!-- 
- <div class="row" id="create-form" style="">
-  <h2 id="create-title">Create Your Own Crypto</h2> 
-  <div class="col-md-6">
-<form action="/list" method="post">
-  <div class="create-field">
-  <div class="form-group">
-    <input type="text" class="form-control" id="symbol" name="symbol" placeholder="Symbol ex:btc" required>
-  </div>
-  <br>
-  <div class="form-group">
-    <input type="text" class="form-control" id="name" name="name" placeholder="Name of your token" required>
-  </div>
-  <br>
-  <div class="form-group-create">
-    <button
-          type="submit"
-          class="btn btn-primary"
-          style="background-color: transparent;"
-          id="create-btn"
-        >Create</button>
-  </div>
-  </div>
-</form>
-  </div>
-  </div>   --}}
 
   <div class="create-wrap">
-  <h3 class="text-center" id="welcome">Create your own Crypto!</h3>
+  <h3 class="text-center" id="welcome"><b>Create</b> your own Crypto!</h3>
 
  <form action="/list" class="signup-form" method="post">
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Symbol" name="symbol" id="username-field"/>
+      <input type="text" class="form-control" placeholder="Symbol ex:btc" name="symbol" id="username-field"/>
       <br>
     </div>
     <div class="form-group">

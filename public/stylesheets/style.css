@@ -5,7 +5,10 @@
 @import "profile.css"; 
 @import "home.css"; 
 
-
+@font-face {
+  font-family: custom-font;
+  src: url(/fonts/CaviarDreams.ttf);
+}
 
 * {
   box-sizing: border-box;

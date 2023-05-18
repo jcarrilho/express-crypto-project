@@ -66,9 +66,10 @@
     font-family: 'custom-font';
     position: relative;
     top: 35px;
+    padding-left: 5px;
 }
 #add-btn:hover{
-    color: lightblue;
+    color: #eb64b5;
 }
 
 #portfolio-text{
@@ -88,7 +89,7 @@
 }
 
 .crypto-list::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
   
   .crypto-list::-webkit-scrollbar-track {

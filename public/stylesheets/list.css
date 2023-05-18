@@ -16,14 +16,14 @@
 }
 
 .crypto-table {
-  height: 370px;
+  height: 375px;
   overflow-y: scroll;
   margin-left: 50px;
   position: relative;
 }
 
 .crypto-table::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 .crypto-table::-webkit-scrollbar-track {
@@ -81,8 +81,7 @@ td {
 }
 
 #create-btn:hover {
-  color: #eb64b5;
-  border-color: lightblue;
+  color: lightblue;
 }
 
 #favorite-btn {
@@ -93,6 +92,10 @@ td {
   padding-top: 1;
   padding-bottom: 1;
   position: relative;
+}
+
+#favorite-btn:hover{
+  color: lightblue;
 }
 
 .table-bg {
@@ -112,4 +115,21 @@ td {
   left: 624px;
 }
 
+#remove-btn{
+  border-color: whitesmoke;
+  font-family: "custom-font";
+  font-size: 15px;
+  padding: 6;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  position: relative;
+  background-color: transparent;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  color: white;
+}
+
+#remove-btn:hover{
+  color: lightblue;
+}
 

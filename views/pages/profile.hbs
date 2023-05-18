@@ -1,3 +1,5 @@
+
+
 <ul class="nav justify-content-end nav-bar" id="profile-navbar">
 
   <li class="nav-item">
@@ -13,8 +15,8 @@
 </div>
 <div class="profile-wrap">
 {{#if userInSession}}
-<h2 id="welcome-text">Welcome, {{userInSession.username}}</h2>
-<p>This is your profile!</p>
+<h2 id="welcome-text">Welcome, {{userInSession.username}}!</h2>
+<p id="profile-text">This is your profile!</p>
 
 {{else}}
 <br> <!-- stands for a new line break -->
