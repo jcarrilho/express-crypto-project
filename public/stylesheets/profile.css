@@ -17,6 +17,16 @@
     right: 25px;
     bottom: 30px;
     font-family: 'custom-font';
+    animation: slide 2s;
+  }
+
+  @keyframes slide{
+    from{
+      opacity: 0.2;
+    }
+    to{
+      opacity: 1;
+    }
   }
 
   .profile-bg{

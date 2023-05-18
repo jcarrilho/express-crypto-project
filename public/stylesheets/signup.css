@@ -10,6 +10,16 @@
   position: relative;
   bottom: 240px;
   right: 15px;
+  animation: slide 2s;
+}
+
+@keyframes slide{
+  from{
+    opacity: 0.2;
+  }
+  to{
+    opacity: 1;
+  }
 }
 
 .signup-form,
