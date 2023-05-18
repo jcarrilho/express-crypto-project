@@ -2,7 +2,7 @@
 
 </head>
 <body>
-  <h1 id="crypto-list">Crypto <b>List</b></h1>
+  <h1 id="crypto-list">Crypto<b>List</b></h1>
   <!-- Displays the list of coins fetched from DB -->
  
  <ul class="nav justify-content-end nav-bar" id="list-navbar">
@@ -18,22 +18,20 @@
   </li>
 
 </ul>
-
+<div class="table-bg" style="width:790px; height: 380px;" >
 <div class="crypto-table">
-  <table class="table table-sm" id="text">
+  <table class="table table-borderless" id="text">
   <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col"></th>
       <th scope="col">Name</th>
-      <th scope="col">symbol</th>
+      <th scope="col">Symbol</th>
     </tr>
   </thead>
   <tbody>
   {{#each cryptos}}
   <tr>
-    <td>{{@index}}</td>
-    <td><img src="{{image}}"></td>
+    <td><img src="{{image}}" id="img-list"></td>
     <td>{{name}}</td>
     <td>{{symbol}}</td>
     <td>
@@ -42,19 +40,20 @@
           type="submit"
           class="btn btn-primary"
           style="background-color: transparent;"
-          id="delete-btn"
-        >Add to Favorite</button>
-        
-    </div>
+          id="favorite-btn"
+        >Add to Portfolio</button>
       </form>
     </td>
-    <td>
+    </div>
+        
+    </div>
+    {{!-- <td>
       {{#unless image}}
             <form action="/delete/{{_id}}" method="POST">
         <button type="submit">Remove Token</button>
       </form>
       {{/unless}}
-    </td>
+    </td> --}}
   </tr>
   {{/each}}
 </tbody>
@@ -63,27 +62,60 @@
 </div>
 
 {{!-- Create crypto Form --}}
-
-  <h2>Create Your Own Crypto</h2> 
-
- <div class="row">
+{{!-- 
+ <div class="row" id="create-form" style="">
+  <h2 id="create-title">Create Your Own Crypto</h2> 
   <div class="col-md-6">
 <form action="/list" method="post">
-  
+  <div class="create-field">
   <div class="form-group">
-    <label for="symbol">Symbol</label>
-    <input type="text" class="form-control" id="symbol" name="symbol" required>
+    <input type="text" class="form-control" id="symbol" name="symbol" placeholder="Symbol ex:btc" required>
   </div>
+  <br>
   <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" name="name" required>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Name of your token" required>
   </div>
-  <div class="form-group">
-    <button type="submit" class="btn btn-primary">Create Crypto</button>
+  <br>
+  <div class="form-group-create">
+    <button
+          type="submit"
+          class="btn btn-primary"
+          style="background-color: transparent;"
+          id="create-btn"
+        >Create</button>
+  </div>
   </div>
 </form>
   </div>
-  </div> 
+  </div>   --}}
+
+  <div class="create-wrap">
+  <h3 class="text-center" id="welcome">Create your own Crypto!</h3>
+
+ <form action="/list" class="signup-form" method="post">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Symbol" name="symbol" id="username-field"/>
+      <br>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Token name" name="name" id="password-field"
+      />
+    </div>
+    <br>
+    <div class="form-group" id="login-btn-box">
+    
+      <br />
+      <div class="form-group">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="background-color: transparent;"
+          id="login-btn"
+        >Create</button>
+    </div>
+  </form>
+</div>  
+
 
 
 </body>

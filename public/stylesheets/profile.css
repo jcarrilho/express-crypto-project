@@ -2,3 +2,32 @@
     display: flex;
     justify-content: center;
 }
+
+#profile-navbar{
+    position: relative;
+    top: 80px;  
+    right: 30px;
+  }
+
+  .profile-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    right: 25px;
+    bottom: 30px;
+    font-family: 'custom-font';
+  }
+
+  .profile-bg{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 320px;
+    height: 300px;
+    position: relative;
+    left: 38%;
+    top: 30%;
+    border-radius: 15px;  }
+
+    #welcome-text{
+        font-size: 42px;
+    }

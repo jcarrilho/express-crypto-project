@@ -3,6 +3,7 @@
 @import "list.css";
 @import "dashboard.css"; 
 @import "profile.css"; 
+@import "home.css"; 
 
 
 
@@ -17,7 +18,6 @@ body{
   font-family: sans-serif;
   color: white;
   height: 100%;
-  background-image: url("/images/bg-1.jpg");
   background-size: 100%;
 }
 

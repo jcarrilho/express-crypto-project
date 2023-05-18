@@ -8,7 +8,8 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  top: 20%;
+  bottom: 240px;
+  right: 15px;
 }
 
 .signup-form,
@@ -22,51 +23,6 @@ h3 {
   font-family: custom-font;
 }
 
-#home-logo {
-  color: whitesmoke;
-  font-family: custom-font;
-  font-size: 30px;
-  position: relative;
-  left: 20px;
-  bottom: 5px;
-  margin-right: 100%;
-}
-
-#introduction-text {
-  font-family: custom-font;
-  text-align: center;
-  position: relative;
-  top: 100px;
-}
-
-.up-login-btn {
-  font-family: custom-font;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: whitesmoke;
-  transition: 0.5 ease;
-  position: relative;
-  bottom: 60px;
-}
-
-.up-login-btn:hover,
-#up-signup-btn:hover {
-  color: lightblue;
-  /* border-color: lightblue; */
-  /*  transform: translateY(-0.25rem);
-  transition: transform 250ms; */
-}
-
-ul:hover li a:not(:hover) {
-  color: whitesmoke;
-  opacity: 0.8;
-  filter: blur(1px);
-}
-
-#up-signup-btn {
-  border: 1px solid whitesmoke;
-  border-radius: 20px;
-}
 
 #username-field:hover,
 #password-field:hover,
@@ -87,31 +43,20 @@ ul:hover li a:not(:hover) {
   border-color: lightblue;
 }
 
-#home-dropdown {
-  position: relative;
-  bottom: 58px;
-  background-color: transparent;
-  border: none;
-  font-family: "custom-font";
-  font-weight: bold;
-  color: whitesmoke;
-  letter-spacing: 1px;
-}
-
-.dropdown-menu {
-  font-family: "custom-font";
-  background-color: rgba(0, 0, 0);
-  border-radius: 10px;
-  color: white;
-}
 
 #account-question {
   font-size: 18px;
 }
 
-#carouselExampleIndicators{
+.signup-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 350px;
+  height: 410px;
   position: relative;
-  left: 740px;
-  bottom: 250px;
+  left: 580px;
+  top: 180px;
+  border-radius: 15px;
 }
+
+
 

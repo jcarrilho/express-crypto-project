@@ -69,7 +69,7 @@
   <ul>
     {{#each user.portfolio}}
       
-        <img src="{{ this.image }}">
+        <img src="{{ this.image }}" id="img-dashboard">
         <span>{{ this.name }} ({{ this.symbol }})</span>
       
       <form action="/dashboard/{{_id}}"  method="post">
@@ -80,6 +80,7 @@
           style="background-color: transparent;"
           id="delete-btn"
         >Delete</button>
+
     </div>
     </form>
     {{/each}}
@@ -94,7 +95,7 @@
           class="btn btn-primary"
           style="background-color: transparent;"
           id="add-btn"
-        >Add more</button>
+        >➕ Add more</button>
     </div>
     </form>
   </div>
