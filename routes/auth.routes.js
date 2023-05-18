@@ -20,7 +20,7 @@ router.get("/home", (req, res) => {
 });
 
 router.get('/signup', (req,res)=>{
-  res.render('pages/signup')
+  res.render('pages/signup');
 })
 
 // POST /auth/signup
@@ -64,7 +64,7 @@ router.post("/signup", (req, res) => {
     .then((salt) => bcrypt.hash(password, salt))
     .then((hashedPassword) => {
       // Create a user and save it in the database
-      return User.create({ username, email, password: hashedPassword });
+     User.create({ username, email, password: hashedPassword });
     })
     .then((user) => {
       res.redirect("/login");

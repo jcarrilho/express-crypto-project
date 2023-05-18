@@ -1,4 +1,35 @@
-<div class="login-bg">
+ <div class="login-bg">
+{{!-- background login-form --}}
+</div> 
+ 
+ <div class="login-wrap">
+  <h3 class="text-center" id="welcome">Welcome!</h3>
+
+ <form action="/login" class="signup-form" method="post">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Username" name="username" id="username-field"/>
+      <br>
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" placeholder="Password" name="password" id="password-field"
+      />
+    </div>
+    <br>
+    <div class="form-group" id="login-btn-box">
+    
+      <br />
+      <div class="form-group">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="background-color: transparent;"
+          id="login-btn"
+        >Login</button>
+    </div>
+  </form>
+</div>  
+
+{{!-- <div class="login-bg">
 
 </div> 
  
@@ -6,7 +37,7 @@
   <h3 class="text-center" id="welcome">Welcome!</h3>
 
 
-  <form action="/login" class="signin-form" method="post">
+  <form action="/list" class="signin-form" method="post">
     <div class="form-group">
       <input type="text" class="form-control" placeholder="Username" name="username" id="username-field"/>
       <br>
@@ -22,7 +53,7 @@
     </div>
     <br>
     <div class="form-group" id="login-btn-box">
-      <form action="/login" class="login-btn">
+      <form action="/list" class="login-btn">
       <br />
       <div class="form-group">
         <button
@@ -36,3 +67,4 @@
 </div> 
 
 
+ --}}
