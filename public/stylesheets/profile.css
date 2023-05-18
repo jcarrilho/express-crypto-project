@@ -15,7 +15,7 @@
     align-items: center;
     position: relative;
     right: 25px;
-    bottom: 30px;
+    bottom: 80px;
     font-family: 'custom-font';
     animation: slide 2s;
   }
@@ -35,7 +35,7 @@
     height: 300px;
     position: relative;
     left: 38%;
-    top: 30%;
+    top: 25%;
     border-radius: 15px;  }
 
     #welcome-text{
