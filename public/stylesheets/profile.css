@@ -5,7 +5,7 @@
 
 #profile-navbar{
     position: relative;
-    top: 80px;  
+    top: 10px;  
     right: 30px;
   }
 
@@ -15,7 +15,7 @@
     align-items: center;
     position: relative;
     right: 25px;
-    bottom: 80px;
+    bottom: 170px;
     font-family: 'custom-font';
     animation: slide 2s;
   }
@@ -35,7 +35,7 @@
     height: 300px;
     position: relative;
     left: 38%;
-    top: 25%;
+    top: 10%;
     border-radius: 15px;  }
 
     #welcome-text{
