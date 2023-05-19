@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  bottom: 10%;
+  bottom: 25%;
   animation: slide 2s;
 }
 
@@ -50,7 +50,7 @@
   height: 300px;
   position: relative;
   left: 42%;
-  top: 30%;
+  top: 15%;
   border-radius: 15px;
 }
 
