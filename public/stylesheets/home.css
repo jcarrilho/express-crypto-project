@@ -101,7 +101,7 @@ body {
 #get-started-btn:hover {
   color: lightblue;
   transform: translateY(-0.550rem);
-  transition: transform 650ms;
+  transition: transform 550ms;
 }
 
 #laptop {
